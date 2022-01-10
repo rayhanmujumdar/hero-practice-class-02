@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+/* ========================
+common css
+======================== */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.img-fluid{
+    max-width: 100%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* =============================
+header section start from here
+================================ */
+.nav-bar{
+    width: 100%;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 80px;
+}
+.logo{
+    flex: 1;
+}
+.nav-menu{
+    flex: 3;
+    display: flex;
+    justify-content: right;
+}
+.nav-bar .logo .img-size{
+    width: 100px;
+    margin: 20px 0;
+}
+.nav-bar .nav-menu .menu,.header-icon{
+    margin: 25px 0;
+    display: flex;
+    justify-content: end;
+}
+.nav-bar .nav-menu .menu li,.header-icon li{
+    padding: 0 10px;
+}
+.nav-bar .nav-menu .menu li a,.header-icon li a{
+    color: white;
+    font-weight: 600;
+    padding:5px 10px;
+    position: relative;
+    white-space: nowrap;
+    z-index: 1;
+    transition:color 1s;
+}
+.nav-menu .menu li a::after{
+    content: "";
+    background-color: #E9204F;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    z-index: -1;
+    transition: width .5s ease-in-out,height .5s ease-in-out;
+    border-radius: 5px;
+}
+.header-icon li a::after{
+    content: "";
+    background-color: #E9204F;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -3px;
+    top: -9px;
+    border-radius: 100%;
+    z-index: -1;
+    transition: width .5s ease-in-out,height .5s ease-in-out;
+    transform: scale(1.2);
+}
+.nav-menu .menu li a:hover{
+    color: black;
+    transition:color 1s;
+}
+.nav-menu .menu li a:hover::after{
+    height: 36px;
+    width: 90px;
+    transition: width .5s ease-in-out,height .5s ease-in-out;
+}
+.header-icon li a i{
+    transition: transform .5s ease-in;
+    font-size: 20px;
+    transition: color 1s;
+}
+.header-icon li a i:hover{
+    transform: scale(1.4);
+    transition: transform .5s ease-in; 
+    color: black;
+    transition: color 1s;
+}
+.header-icon li a:hover::after{
+    width: 45px;
+    height: 45px;
+}
