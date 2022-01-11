@@ -62,36 +62,41 @@ header section start from here
 .nav-menu .menu li a::after{
     content: "";
     background-color: #E9204F;
-    height: 0;
-    width: 0;
+    height: 36px;
+    width: 90px;
     position: absolute;
     top: -3px;
     left: 0px;
     z-index: -1;
-    transition: width .5s ease-in-out,height .5s ease-in-out;
+    transition: width .5s ease-in-out,height .5s ease-in-out,transform 0.5s;
     border-radius: 5px;
+    transform-origin: center;
+    transform: scale(0);
+}
+.nav-menu .menu li a:hover::after{
+    height: 36px;
+    width: 90px;
+    transition: width .5s ease-in-out,height .5s ease-in-out,transform 0.5s;
+    transform: scale(1);
+    transform-origin: left top;
+}
+.nav-menu .menu li a:hover{
+    color: black;
+    transition: color 1s;
 }
 .header-icon li a::after{
     content: "";
     background-color: #E9204F;
-    height: 0;
-    width: 0;
+    height: 45px;
+    width: 45px;
     position: absolute;
     left: -3px;
     top: -9px;
     border-radius: 100%;
     z-index: -1;
-    transition: width .5s ease-in-out,height .5s ease-in-out;
-    transform: scale(1.2);
-}
-.nav-menu .menu li a:hover{
-    color: black;
-    transition:color 1s;
-}
-.nav-menu .menu li a:hover::after{
-    height: 36px;
-    width: 90px;
-    transition: width .5s ease-in-out,height .5s ease-in-out;
+    transform: scale(0);
+    transform-origin: center;
+    transition: width .5s ease-in-out,height .5s ease-in-out,transform 1s;
 }
 .header-icon li a i{
     transition: transform .5s ease-in;
@@ -107,4 +112,7 @@ header section start from here
 .header-icon li a:hover::after{
     width: 45px;
     height: 45px;
+    transform: scale(1);
+    transform-origin: top left;
+    transition: transform 0.5s;
 }
